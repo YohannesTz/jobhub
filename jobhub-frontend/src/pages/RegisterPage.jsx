@@ -36,19 +36,26 @@ const RegisterPage = () => {
 
     try {
       const response = await authApi.register(formData);
-      setAuth(response.data);
       
-      // Redirect based on role
-      if (formData.role === 'USER') {
-        navigate('/dashboard');
-      } else if (formData.role === 'COMPANY') {
-        navigate('/company/dashboard');
+      // Only proceed if we have valid response data
+      if (response.data && response.data.user && response.data.accessToken) {
+        setAuth(response.data);
+        
+        // Redirect based on role
+        if (formData.role === 'USER') {
+          navigate('/dashboard', { replace: true });
+        } else if (formData.role === 'COMPANY') {
+          navigate('/company/dashboard', { replace: true });
+        } else {
+          navigate('/', { replace: true });
+        }
       } else {
-        navigate('/');
+        setError('Invalid response from server. Please try again.');
+        setLoading(false);
       }
     } catch (err) {
+      // Handle error and stay on register page
       setError(err.response?.data?.message || 'Registration failed. Please try again.');
-    } finally {
       setLoading(false);
     }
   };

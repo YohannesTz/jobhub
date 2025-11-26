@@ -13,6 +13,7 @@ public class ApplyJobRequest {
     
     private String message;
     
+    @Builder.Default
     private Boolean useStoredResume = true;
     
     private String resumeUrl;

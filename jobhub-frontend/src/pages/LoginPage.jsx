@@ -28,22 +28,29 @@ const LoginPage = () => {
 
     try {
       const response = await authApi.login(formData);
-      setAuth(response.data);
       
-      // Redirect based on role
-      const role = response.data.user.role;
-      if (role === 'USER') {
-        navigate('/dashboard');
-      } else if (role === 'COMPANY') {
-        navigate('/company/dashboard');
-      } else if (role === 'ADMIN') {
-        navigate('/admin/dashboard');
+      // Only proceed if we have valid response data
+      if (response.data && response.data.user && response.data.accessToken) {
+        setAuth(response.data);
+        
+        // Redirect based on role
+        const role = response.data.user.role;
+        if (role === 'USER') {
+          navigate('/dashboard', { replace: true });
+        } else if (role === 'COMPANY') {
+          navigate('/company/dashboard', { replace: true });
+        } else if (role === 'ADMIN') {
+          navigate('/admin/dashboard', { replace: true });
+        } else {
+          navigate('/', { replace: true });
+        }
       } else {
-        navigate('/');
+        setError('Invalid response from server. Please try again.');
+        setLoading(false);
       }
     } catch (err) {
-      setError(err.response?.data?.message || 'Login failed. Please try again.');
-    } finally {
+      // Handle error and stay on login page
+      setError(err.response?.data?.message || 'Invalid email or password. Please try again.');
       setLoading(false);
     }
   };
