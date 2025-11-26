@@ -55,7 +55,7 @@ const AdminDashboardPage = () => {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] space-y-4">
-        <Loader2 className="h-12 w-12 text-blue-600 animate-spin" />
+        <Loader2 className="h-12 w-12 text-gray-900 animate-spin" />
         <p className="text-gray-600">Loading dashboard...</p>
       </div>
     );
@@ -78,8 +78,8 @@ const AdminDashboardPage = () => {
                 <p className="text-sm text-gray-600 mb-1">Total Users</p>
                 <p className="text-3xl font-bold text-gray-900">{users.length}</p>
               </div>
-              <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                <Users className="h-6 w-6 text-blue-600" />
+              <div className="h-12 w-12 bg-gray-200 rounded-lg flex items-center justify-center">
+                <Users className="h-6 w-6 text-gray-900" />
               </div>
             </div>
           </div>
@@ -105,7 +105,7 @@ const AdminDashboardPage = () => {
                 onClick={() => setActiveTab('users')}
                 className={`py-4 px-1 border-b-2 font-medium transition-colors duration-200 ${
                   activeTab === 'users'
-                    ? 'border-blue-600 text-blue-600'
+                    ? 'border-gray-900 text-gray-900'
                     : 'border-transparent text-gray-600 hover:text-gray-900'
                 }`}
               >
@@ -115,7 +115,7 @@ const AdminDashboardPage = () => {
                 onClick={() => setActiveTab('jobs')}
                 className={`py-4 px-1 border-b-2 font-medium transition-colors duration-200 ${
                   activeTab === 'jobs'
-                    ? 'border-blue-600 text-blue-600'
+                    ? 'border-gray-900 text-gray-900'
                     : 'border-transparent text-gray-600 hover:text-gray-900'
                 }`}
               >
@@ -142,7 +142,7 @@ const AdminDashboardPage = () => {
                       <tr key={user.id} className="border-b border-gray-100 hover:bg-gray-50">
                         <td className="py-4 px-4">
                           <div className="flex items-center space-x-3">
-                            <div className="h-10 w-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-semibold">
+                            <div className="h-10 w-10 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center text-white font-semibold">
                               {user.name.charAt(0).toUpperCase()}
                             </div>
                             <span className="font-medium text-gray-900">{user.name}</span>
@@ -151,8 +151,8 @@ const AdminDashboardPage = () => {
                         <td className="py-4 px-4 text-gray-600">{user.email}</td>
                         <td className="py-4 px-4">
                           <span className={`badge ${
-                            user.role === 'ADMIN' ? 'bg-purple-100 text-purple-700' :
-                            user.role === 'COMPANY' ? 'bg-blue-100 text-blue-700' :
+                            user.role === 'ADMIN' ? 'bg-gray-300 text-gray-900' :
+                            user.role === 'COMPANY' ? 'bg-gray-200 text-gray-800' :
                             'bg-green-100 text-green-700'
                           }`}>
                             {user.role}

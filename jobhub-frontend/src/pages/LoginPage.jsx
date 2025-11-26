@@ -53,7 +53,7 @@ const LoginPage = () => {
       <div className="max-w-md w-full space-y-8 animate-fade-in">
         <div className="text-center">
           <div className="flex justify-center">
-            <div className="h-16 w-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4">
+            <div className="h-16 w-16 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center mb-4">
               <LogIn className="h-8 w-8 text-white" />
             </div>
           </div>
@@ -130,7 +130,7 @@ const LoginPage = () => {
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">
               Don't have an account?{' '}
-              <Link to="/register" className="font-semibold text-blue-600 hover:text-blue-700">
+              <Link to="/register" className="font-semibold text-gray-900 hover:text-gray-700">
                 Create one now
               </Link>
             </p>

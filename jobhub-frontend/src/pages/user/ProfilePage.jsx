@@ -93,7 +93,7 @@ const ProfilePage = () => {
           <div className="card p-6 animate-slide-up">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">Profile Picture</h2>
             <div className="flex items-center space-x-6">
-              <div className="h-24 w-24 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-3xl font-semibold">
+              <div className="h-24 w-24 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center text-white text-3xl font-semibold">
                 {user?.name?.charAt(0).toUpperCase()}
               </div>
               <div>
@@ -211,9 +211,9 @@ const ProfilePage = () => {
             <h2 className="text-xl font-semibold text-gray-900 mb-4">Resume</h2>
             
             {user?.resumeUrl && (
-              <div className="mb-4 p-4 bg-blue-50 border border-blue-200 rounded-lg flex items-center justify-between">
+              <div className="mb-4 p-4 bg-gray-50 border border-gray-300 rounded-lg flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                  <FileText className="h-6 w-6 text-blue-600" />
+                  <FileText className="h-6 w-6 text-gray-900" />
                   <div>
                     <p className="text-sm font-medium text-gray-900">Current Resume</p>
                     <p className="text-xs text-gray-600">Uploaded resume</p>
@@ -231,7 +231,7 @@ const ProfilePage = () => {
             )}
 
             <label className="block">
-              <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-blue-500 transition-colors duration-200 cursor-pointer">
+              <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-gray-900 transition-colors duration-200 cursor-pointer">
                 <Upload className="h-10 w-10 text-gray-400 mx-auto mb-2" />
                 <p className="text-sm text-gray-600 mb-1">
                   {uploading ? 'Uploading...' : 'Click to upload or drag and drop'}

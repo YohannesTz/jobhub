@@ -26,7 +26,7 @@ const DashboardPage = () => {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] space-y-4">
-        <Loader2 className="h-12 w-12 text-blue-600 animate-spin" />
+        <Loader2 className="h-12 w-12 text-gray-900 animate-spin" />
         <p className="text-gray-600">Loading your applications...</p>
       </div>
     );
@@ -49,8 +49,8 @@ const DashboardPage = () => {
                 <p className="text-sm text-gray-600 mb-1">Total Applications</p>
                 <p className="text-3xl font-bold text-gray-900">{applications.length}</p>
               </div>
-              <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                <Briefcase className="h-6 w-6 text-blue-600" />
+              <div className="h-12 w-12 bg-gray-200 rounded-lg flex items-center justify-center">
+                <Briefcase className="h-6 w-6 text-gray-900" />
               </div>
             </div>
           </div>
@@ -80,8 +80,8 @@ const DashboardPage = () => {
                 <p className="text-sm text-gray-600 mb-1">Response Rate</p>
                 <p className="text-3xl font-bold text-gray-900">--</p>
               </div>
-              <div className="h-12 w-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                <FileText className="h-6 w-6 text-purple-600" />
+              <div className="h-12 w-12 bg-gray-200 rounded-lg flex items-center justify-center">
+                <FileText className="h-6 w-6 text-gray-900" />
               </div>
             </div>
           </div>
@@ -125,13 +125,13 @@ const DashboardPage = () => {
                 <div
                   key={application.id}
                   onClick={() => navigate(`/jobs/${application.jobId}`)}
-                  className="p-5 border border-gray-200 rounded-lg hover:shadow-md hover:border-blue-300 transition-all duration-200 cursor-pointer group"
+                  className="p-5 border border-gray-200 rounded-lg hover:shadow-md hover:border-gray-400 transition-all duration-200 cursor-pointer group"
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
                       <div className="flex items-center space-x-3 mb-2">
                         <Briefcase className="h-5 w-5 text-gray-400" />
-                        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-200">
+                        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-gray-700 transition-colors duration-200">
                           {application.jobTitle}
                         </h3>
                       </div>
@@ -148,7 +148,7 @@ const DashboardPage = () => {
                       )}
                     </div>
 
-                    <span className="badge bg-blue-100 text-blue-700 ml-4">
+                    <span className="badge bg-gray-200 text-gray-800 ml-4">
                       Submitted
                     </span>
                   </div>

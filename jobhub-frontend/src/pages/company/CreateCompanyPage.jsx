@@ -40,7 +40,7 @@ const CreateCompanyPage = () => {
       <div className="max-w-2xl mx-auto animate-fade-in">
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
-            <div className="h-16 w-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
+            <div className="h-16 w-16 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center">
               <Building2 className="h-8 w-8 text-white" />
             </div>
           </div>

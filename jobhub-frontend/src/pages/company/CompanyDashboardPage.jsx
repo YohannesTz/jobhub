@@ -32,7 +32,7 @@ const CompanyDashboardPage = () => {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] space-y-4">
-        <Loader2 className="h-12 w-12 text-blue-600 animate-spin" />
+        <Loader2 className="h-12 w-12 text-gray-900 animate-spin" />
         <p className="text-gray-600">Loading dashboard...</p>
       </div>
     );
@@ -55,8 +55,8 @@ const CompanyDashboardPage = () => {
                 <p className="text-sm text-gray-600 mb-1">Total Companies</p>
                 <p className="text-3xl font-bold text-gray-900">{companies.length}</p>
               </div>
-              <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                <Building2 className="h-6 w-6 text-blue-600" />
+              <div className="h-12 w-12 bg-gray-200 rounded-lg flex items-center justify-center">
+                <Building2 className="h-6 w-6 text-gray-900" />
               </div>
             </div>
           </div>
@@ -79,8 +79,8 @@ const CompanyDashboardPage = () => {
                 <p className="text-sm text-gray-600 mb-1">Total Applicants</p>
                 <p className="text-3xl font-bold text-gray-900">--</p>
               </div>
-              <div className="h-12 w-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                <Users className="h-6 w-6 text-purple-600" />
+              <div className="h-12 w-12 bg-gray-200 rounded-lg flex items-center justify-center">
+                <Users className="h-6 w-6 text-gray-900" />
               </div>
             </div>
           </div>
@@ -122,7 +122,7 @@ const CompanyDashboardPage = () => {
               {companies.map((company) => (
                 <div key={company.id} className="p-5 border border-gray-200 rounded-lg hover:shadow-md transition-all duration-200">
                   <div className="flex items-center space-x-3 mb-3">
-                    <div className="h-12 w-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white font-semibold">
+                    <div className="h-12 w-12 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg flex items-center justify-center text-white font-semibold">
                       {company.name.charAt(0)}
                     </div>
                     <div className="flex-1">
@@ -137,7 +137,7 @@ const CompanyDashboardPage = () => {
                   </p>
                   <button 
                     onClick={() => navigate(`/company/${company.id}/edit`)}
-                    className="text-sm text-blue-600 hover:text-blue-700 font-medium"
+                    className="text-sm text-gray-900 hover:text-gray-700 font-medium"
                   >
                     Edit →
                   </button>
@@ -188,7 +188,7 @@ const CompanyDashboardPage = () => {
               {jobs.map((job) => (
                 <div
                   key={job.id}
-                  className="p-5 border border-gray-200 rounded-lg hover:shadow-md hover:border-blue-300 transition-all duration-200"
+                  className="p-5 border border-gray-200 rounded-lg hover:shadow-md hover:border-gray-400 transition-all duration-200"
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex-1">
@@ -210,7 +210,7 @@ const CompanyDashboardPage = () => {
                     <span className="text-gray-300">•</span>
                     <button 
                       onClick={() => navigate(`/company/jobs/${job.id}/applicants`)}
-                      className="text-sm text-blue-600 hover:text-blue-700 font-medium"
+                      className="text-sm text-gray-900 hover:text-gray-700 font-medium"
                     >
                       View Applicants
                     </button>

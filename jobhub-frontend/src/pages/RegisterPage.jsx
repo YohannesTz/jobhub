@@ -58,7 +58,7 @@ const RegisterPage = () => {
       <div className="max-w-md w-full space-y-8 animate-fade-in">
         <div className="text-center">
           <div className="flex justify-center">
-            <div className="h-16 w-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4">
+            <div className="h-16 w-16 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center mb-4">
               <UserPlus className="h-8 w-8 text-white" />
             </div>
           </div>
@@ -143,13 +143,13 @@ const RegisterPage = () => {
                   onClick={() => setFormData({ ...formData, role: 'USER' })}
                   className={`p-4 rounded-lg border-2 transition-all duration-200 ${
                     formData.role === 'USER'
-                      ? 'border-blue-500 bg-blue-50'
+                      ? 'border-gray-900 bg-gray-50'
                       : 'border-gray-200 hover:border-gray-300'
                   }`}
                 >
                   <div className="flex flex-col items-center space-y-2">
-                    <User className={`h-6 w-6 ${formData.role === 'USER' ? 'text-blue-600' : 'text-gray-400'}`} />
-                    <span className={`text-sm font-medium ${formData.role === 'USER' ? 'text-blue-900' : 'text-gray-700'}`}>
+                    <User className={`h-6 w-6 ${formData.role === 'USER' ? 'text-gray-900' : 'text-gray-400'}`} />
+                    <span className={`text-sm font-medium ${formData.role === 'USER' ? 'text-gray-900' : 'text-gray-700'}`}>
                       Find Jobs
                     </span>
                   </div>
@@ -159,13 +159,13 @@ const RegisterPage = () => {
                   onClick={() => setFormData({ ...formData, role: 'COMPANY' })}
                   className={`p-4 rounded-lg border-2 transition-all duration-200 ${
                     formData.role === 'COMPANY'
-                      ? 'border-blue-500 bg-blue-50'
+                      ? 'border-gray-900 bg-gray-50'
                       : 'border-gray-200 hover:border-gray-300'
                   }`}
                 >
                   <div className="flex flex-col items-center space-y-2">
-                    <Briefcase className={`h-6 w-6 ${formData.role === 'COMPANY' ? 'text-blue-600' : 'text-gray-400'}`} />
-                    <span className={`text-sm font-medium ${formData.role === 'COMPANY' ? 'text-blue-900' : 'text-gray-700'}`}>
+                    <Briefcase className={`h-6 w-6 ${formData.role === 'COMPANY' ? 'text-gray-900' : 'text-gray-400'}`} />
+                    <span className={`text-sm font-medium ${formData.role === 'COMPANY' ? 'text-gray-900' : 'text-gray-700'}`}>
                       Post Jobs
                     </span>
                   </div>
@@ -195,7 +195,7 @@ const RegisterPage = () => {
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">
               Already have an account?{' '}
-              <Link to="/login" className="font-semibold text-blue-600 hover:text-blue-700">
+              <Link to="/login" className="font-semibold text-gray-900 hover:text-gray-700">
                 Sign in
               </Link>
             </p>

@@ -133,7 +133,7 @@ const ApplyPage = () => {
                       type="radio"
                       checked={formData.useStoredResume}
                       onChange={() => setFormData({ ...formData, useStoredResume: true })}
-                      className="h-4 w-4 text-blue-600"
+                      className="h-4 w-4 text-gray-900"
                     />
                     <div className="flex items-center space-x-2">
                       <FileText className="h-5 w-5 text-gray-400" />
@@ -148,7 +148,7 @@ const ApplyPage = () => {
                   type="radio"
                   checked={!formData.useStoredResume}
                   onChange={() => setFormData({ ...formData, useStoredResume: false })}
-                  className="h-4 w-4 text-blue-600"
+                  className="h-4 w-4 text-gray-900"
                 />
                 <div className="flex items-center space-x-2">
                   <Upload className="h-5 w-5 text-gray-400" />
@@ -174,9 +174,9 @@ const ApplyPage = () => {
                     </div>
                   </label>
                   {selectedFile && (
-                    <div className="mt-3 p-3 bg-blue-50 border border-blue-200 rounded-lg flex items-center space-x-2">
-                      <FileText className="h-5 w-5 text-blue-600" />
-                      <span className="text-sm text-blue-900 font-medium">{selectedFile.name}</span>
+                    <div className="mt-3 p-3 bg-gray-50 border border-gray-300 rounded-lg flex items-center space-x-2">
+                      <FileText className="h-5 w-5 text-gray-900" />
+                      <span className="text-sm text-gray-900 font-medium">{selectedFile.name}</span>
                     </div>
                   )}
                 </div>

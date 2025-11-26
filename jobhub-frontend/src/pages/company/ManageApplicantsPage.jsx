@@ -32,7 +32,7 @@ const ManageApplicantsPage = () => {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] space-y-4">
-        <Loader2 className="h-12 w-12 text-blue-600 animate-spin" />
+        <Loader2 className="h-12 w-12 text-gray-900 animate-spin" />
         <p className="text-gray-600">Loading applicants...</p>
       </div>
     );
@@ -75,7 +75,7 @@ const ManageApplicantsPage = () => {
               <div key={application.id} className="card p-6 hover:shadow-lg transition-all duration-200">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-4">
-                    <div className="h-14 w-14 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-xl font-semibold">
+                    <div className="h-14 w-14 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center text-white text-xl font-semibold">
                       {application.userName.charAt(0).toUpperCase()}
                     </div>
                     <div>
@@ -112,7 +112,7 @@ const ManageApplicantsPage = () => {
                     href={application.resumeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                    className="inline-flex items-center space-x-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200"
                   >
                     <FileText className="h-4 w-4" />
                     <span>View Resume</span>

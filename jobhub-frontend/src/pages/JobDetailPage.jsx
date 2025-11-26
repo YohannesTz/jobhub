@@ -37,7 +37,7 @@ const JobDetailPage = () => {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] space-y-4">
-        <Loader2 className="h-12 w-12 text-blue-600 animate-spin" />
+        <Loader2 className="h-12 w-12 text-gray-900 animate-spin" />
         <p className="text-gray-600">Loading job details...</p>
       </div>
     );
@@ -95,7 +95,7 @@ const JobDetailPage = () => {
             
             <div className="flex flex-wrap gap-6">
               <div className="flex items-center space-x-2 text-gray-700">
-                <MapPin className="h-5 w-5 text-blue-600" />
+                <MapPin className="h-5 w-5 text-gray-900" />
                 <span className="font-medium">{job.location}</span>
               </div>
 
@@ -107,7 +107,7 @@ const JobDetailPage = () => {
               )}
 
               <div className="flex items-center space-x-2 text-gray-700">
-                <Calendar className="h-5 w-5 text-purple-600" />
+                <Calendar className="h-5 w-5 text-gray-900" />
                 <span className="font-medium">Posted {new Date(job.postedAt).toLocaleDateString()}</span>
               </div>
             </div>

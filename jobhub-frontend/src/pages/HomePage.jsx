@@ -89,7 +89,7 @@ const HomePage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {loading ? (
           <div className="flex flex-col items-center justify-center py-20 space-y-4">
-            <Loader2 className="h-12 w-12 text-blue-600 animate-spin" />
+            <Loader2 className="h-12 w-12 text-gray-900 animate-spin" />
             <p className="text-gray-600">Loading opportunities...</p>
           </div>
         ) : (
@@ -148,7 +148,7 @@ const HomePage = () => {
                           onClick={() => handlePageChange(page)}
                           className={`px-4 py-2 rounded-lg font-medium ${
                             page === currentPage
-                              ? 'bg-blue-600 text-white'
+                              ? 'bg-gray-900 text-white'
                               : 'border border-gray-300 text-gray-700 hover:bg-gray-50'
                           }`}
                         >
