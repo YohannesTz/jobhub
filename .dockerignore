@@ -1,0 +1,22 @@
+# Backend
+jobhub-backend/build/
+jobhub-backend/.gradle/
+jobhub-backend/bin/
+jobhub-backend/out/
+jobhub-backend/.idea/
+jobhub-backend/*.iml
+
+# Frontend
+jobhub-frontend/node_modules/
+jobhub-frontend/dist/
+jobhub-frontend/.env.local
+jobhub-frontend/.env.*.local
+
+# Common
+.git/
+.gitignore
+README.md
+*.md
+.DS_Store
+*.log
+

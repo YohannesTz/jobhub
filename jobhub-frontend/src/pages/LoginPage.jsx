@@ -47,7 +47,15 @@ const LoginPage = () => {
       if (response.data && response.data.user && response.data.accessToken) {
         setAuth(response.data);
         
-        // Redirect based on role
+        // Check if there's a return URL (from trying to apply to a job)
+        const returnUrl = sessionStorage.getItem('returnUrl');
+        if (returnUrl) {
+          sessionStorage.removeItem('returnUrl');
+          navigate(returnUrl, { replace: true });
+          return;
+        }
+        
+        // Otherwise, redirect based on role
         const role = response.data.user.role;
         if (role === 'USER') {
           navigate('/dashboard', { replace: true });

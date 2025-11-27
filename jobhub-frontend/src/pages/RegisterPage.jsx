@@ -41,7 +41,15 @@ const RegisterPage = () => {
       if (response.data && response.data.user && response.data.accessToken) {
         setAuth(response.data);
         
-        // Redirect based on role
+        // Check if there's a return URL (from trying to apply to a job)
+        const returnUrl = sessionStorage.getItem('returnUrl');
+        if (returnUrl && formData.role === 'USER') {
+          sessionStorage.removeItem('returnUrl');
+          navigate(returnUrl, { replace: true });
+          return;
+        }
+        
+        // Otherwise, redirect based on role
         if (formData.role === 'USER') {
           navigate('/dashboard', { replace: true });
         } else if (formData.role === 'COMPANY') {

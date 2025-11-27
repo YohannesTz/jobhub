@@ -6,3 +6,17 @@
 /backend.pid
 /frontend.log
 /frontend.pid
+
+# Screenshots (keep directory but ignore temp files)
+screenshots/*.tmp
+
+# Docker
+.env
+.env.local
+
+# IDE
+node_modules
+dist
+build
+*.iml
+.idea
