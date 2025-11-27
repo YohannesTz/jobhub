@@ -21,7 +21,7 @@ api.interceptors.request.use(
   }
 );
 
-// Response interceptor to handle token refresh
+// Response interceptor to handle token refresh and auto-logout
 api.interceptors.response.use(
   (response) => response,
   async (error) => {
@@ -58,17 +58,39 @@ api.interceptors.response.use(
         originalRequest.headers.Authorization = `Bearer ${accessToken}`;
         return api(originalRequest);
       } catch (refreshError) {
-        // Refresh failed, logout user
+        // Refresh failed - session expired, logout user
+        console.log('Session expired. Logging out...');
+        
+        // Clear all auth data
         localStorage.removeItem('accessToken');
         localStorage.removeItem('refreshToken');
         localStorage.removeItem('user');
         
+        // Store a message for the login page
+        sessionStorage.setItem('sessionExpired', 'true');
+        
         // Only redirect if not already on login/register page
         if (!window.location.pathname.includes('/login') && 
             !window.location.pathname.includes('/register')) {
-          window.location.href = '/login';
+          // Redirect to login with a message
+          window.location.href = '/login?expired=true';
         }
-        return Promise.reject(refreshError);
+        
+        return Promise.reject(new Error('Session expired'));
+      }
+    }
+
+    // Handle other 401 errors (invalid token, etc.)
+    if (error.response?.status === 401) {
+      console.log('Authentication failed. Logging out...');
+      
+      localStorage.removeItem('accessToken');
+      localStorage.removeItem('refreshToken');
+      localStorage.removeItem('user');
+      
+      if (!window.location.pathname.includes('/login') && 
+          !window.location.pathname.includes('/register')) {
+        window.location.href = '/login';
       }
     }
 

@@ -1,4 +1,8 @@
 **/.DS_Store
 **/.log
+*.log
+*.pid
 /backend.log
 /backend.pid
+/frontend.log
+/frontend.pid

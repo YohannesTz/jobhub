@@ -1,18 +1,32 @@
-import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { LogIn, Mail, Lock, AlertCircle } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
+import { LogIn, Mail, Lock, AlertCircle, Info } from 'lucide-react';
 import { authApi } from '../api/authApi';
 import useAuthStore from '../store/authStore';
 
 const LoginPage = () => {
+  const [searchParams] = useSearchParams();
   const [formData, setFormData] = useState({
     email: '',
     password: ''
   });
   const [error, setError] = useState('');
+  const [sessionExpired, setSessionExpired] = useState(false);
   const [loading, setLoading] = useState(false);
   const { setAuth } = useAuthStore();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Check if session expired
+    if (searchParams.get('expired') === 'true' || sessionStorage.getItem('sessionExpired') === 'true') {
+      setSessionExpired(true);
+      sessionStorage.removeItem('sessionExpired');
+      
+      // Clear the expired message after 5 seconds
+      const timer = setTimeout(() => setSessionExpired(false), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [searchParams]);
 
   const handleChange = (e) => {
     setFormData({
@@ -69,6 +83,16 @@ const LoginPage = () => {
         </div>
 
         <div className="card p-8">
+          {sessionExpired && (
+            <div className="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg flex items-start space-x-3 animate-slide-up">
+              <Info className="h-5 w-5 text-yellow-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="text-sm font-semibold text-yellow-900">Session Expired</p>
+                <p className="text-sm text-yellow-800">Your session has expired. Please log in again.</p>
+              </div>
+            </div>
+          )}
+
           {error && (
             <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start space-x-3 animate-slide-up">
               <AlertCircle className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" />
