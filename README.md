@@ -1,56 +1,48 @@
+<div align="center">
+
 # JobHub - Job Portal Platform
 
+![Tech Stack](screenshots/tech-stack.png)
+
 A full-stack job portal application built with Spring Boot and React, featuring JWT authentication, S3-compatible storage, and role-based access control.
+
+</div>
 
 ## Screenshots
 
 ### Landing Page
 ![Landing Page](screenshots/landing-main.png)
-*Modern landing page with call-to-action*
 
 ### Job Listings
 ![Job Listings](screenshots/joblistings.png)
-*Browse jobs without authentication*
 
 ![Job Detail](screenshots/joblistings-detail.png)
-*Detailed job view with Apply Now button*
 
 ![Login Prompt](screenshots/joblistings-detail-loginprompt.png)
-*Login prompt modal for unauthenticated users*
 
 ### Authentication
 ![Login Page](screenshots/login.png)
-*Clean login interface*
 
 ![Create Account](screenshots/creat-account.png)
-*User registration form*
 
 ![Talent Signup](screenshots/talent-signup.png)
-*Talent signup process*
 
 ### User Dashboard
 ![Talent Dashboard](screenshots/talent-dashboard.png)
-*User dashboard with application tracking*
 
 ![Talent Profile](screenshots/talent-profile.png)
-*User profile management with file uploads*
 
 ![Apply to Job](screenshots/apply-to-job.png)
-*Job application form*
 
 ### Company Dashboard
 ![Company Dashboard](screenshots/company-dashboard.png)
-*Company dashboard and job management*
 
 ![Create Company](screenshots/company-dashboard-creat-company.png)
-*Company profile creation*
 
 ![Post New Job](screenshots/post-new-job.png)
-*Job posting form*
 
 ### Infrastructure
 ![S3 Ninja Dashboard](screenshots/s3-ninja-dashboard.png)
-*S3 Ninja web interface for file management*
 
 ## Table of Contents
 
