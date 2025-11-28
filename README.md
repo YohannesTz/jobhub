@@ -10,39 +10,76 @@ A full-stack job portal application built with Spring Boot and React, featuring 
 
 ## Screenshots
 
-### Landing Page
-![Landing Page](screenshots/landing-main.png)
-
-### Job Listings
-![Job Listings](screenshots/joblistings.png)
-
-![Job Detail](screenshots/joblistings-detail.png)
-
-![Login Prompt](screenshots/joblistings-detail-loginprompt.png)
-
-### Authentication
-![Login Page](screenshots/login.png)
-
-![Create Account](screenshots/creat-account.png)
-
-![Talent Signup](screenshots/talent-signup.png)
-
-### User Dashboard
-![Talent Dashboard](screenshots/talent-dashboard.png)
-
-![Talent Profile](screenshots/talent-profile.png)
-
-![Apply to Job](screenshots/apply-to-job.png)
-
-### Company Dashboard
-![Company Dashboard](screenshots/company-dashboard.png)
-
-![Create Company](screenshots/company-dashboard-creat-company.png)
-
-![Post New Job](screenshots/post-new-job.png)
-
-### Infrastructure
-![S3 Ninja Dashboard](screenshots/s3-ninja-dashboard.png)
+<table>
+  <tr>
+    <td width="33%" align="center">
+      <img src="screenshots/landing-main.png" alt="Landing Page" width="100%"/>
+      <br><b>Landing Page</b>
+    </td>
+    <td width="33%" align="center">
+      <img src="screenshots/joblistings.png" alt="Job Listings" width="100%"/>
+      <br><b>Job Listings</b>
+    </td>
+    <td width="33%" align="center">
+      <img src="screenshots/joblistings-detail.png" alt="Job Detail" width="100%"/>
+      <br><b>Job Detail</b>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">
+      <img src="screenshots/joblistings-detail-loginprompt.png" alt="Login Prompt" width="100%"/>
+      <br><b>Login Prompt</b>
+    </td>
+    <td width="33%" align="center">
+      <img src="screenshots/login.png" alt="Login Page" width="100%"/>
+      <br><b>Login Page</b>
+    </td>
+    <td width="33%" align="center">
+      <img src="screenshots/creat-account.png" alt="Create Account" width="100%"/>
+      <br><b>Create Account</b>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">
+      <img src="screenshots/talent-signup.png" alt="Talent Signup" width="100%"/>
+      <br><b>Talent Signup</b>
+    </td>
+    <td width="33%" align="center">
+      <img src="screenshots/talent-dashboard.png" alt="Talent Dashboard" width="100%"/>
+      <br><b>Talent Dashboard</b>
+    </td>
+    <td width="33%" align="center">
+      <img src="screenshots/talent-profile.png" alt="Talent Profile" width="100%"/>
+      <br><b>Talent Profile</b>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">
+      <img src="screenshots/apply-to-job.png" alt="Apply to Job" width="100%"/>
+      <br><b>Apply to Job</b>
+    </td>
+    <td width="33%" align="center">
+      <img src="screenshots/company-dashboard.png" alt="Company Dashboard" width="100%"/>
+      <br><b>Company Dashboard</b>
+    </td>
+    <td width="33%" align="center">
+      <img src="screenshots/company-dashboard-creat-company.png" alt="Create Company" width="100%"/>
+      <br><b>Create Company</b>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">
+      <img src="screenshots/post-new-job.png" alt="Post New Job" width="100%"/>
+      <br><b>Post New Job</b>
+    </td>
+    <td width="33%" align="center">
+      <img src="screenshots/s3-ninja-dashboard.png" alt="S3 Ninja Dashboard" width="100%"/>
+      <br><b>S3 Ninja Dashboard</b>
+    </td>
+    <td width="33%" align="center">
+    </td>
+  </tr>
+</table>
 
 ## Table of Contents
 
